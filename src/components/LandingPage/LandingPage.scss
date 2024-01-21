@@ -1,0 +1,227 @@
+@import '../../App.scss';
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@500;600;700;900&family=Joti+One&family=Montserrat:ital,wght@0,500;1,500&family=Outfit:wght@500;600;900&family=Playfair+Display&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,400&family=Righteous&family=Roboto:wght@300;400;500&family=Rubik&family=Rubik+Glitch&family=Rubik+Maps&family=Rubik+Scribble&display=swap');
+
+.landingBanner{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    // background: url('https://atlas-content-cdn.pixelsquid.com/stock-images/gold-tron-cryptocurrency-coin-18WwqY8-600.jpg') no-repeat center center fixed;
+    background: url('/public/img/bg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+
+                @include mobile{
+                    height: 68vh;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                @include small{
+                    height: 68vh;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                @include tablet{
+                    height: 60vh;
+                    // flex-direction: column;
+                    // justify-content: center;
+                    // align-items: center;
+                }
+
+  .textContainer{  
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center; 
+        width: 40%;
+
+                @include small{
+                width: 100%;
+                padding: 1rem;
+                }
+                @include mobile{
+                width: 100%;
+                padding: 1rem;
+                }
+                @include tablet{
+                width: 50%;
+                padding: 1rem;
+                }
+   h5{
+            font-size: 5vh;
+            color: var(--secondary-color);
+
+                @include small{
+                    font-size: 3vh;
+                }
+                @include mobile{
+                    font-size: 3vh;
+                }
+                @include tablet{
+                    font-size: 3.5vh;
+                }
+   }
+  h3{
+     color: var(--secondary-color);
+     font-size: 11vh;
+
+            @include small{
+               font-size: 5vh;
+            }
+            @include mobile{
+               font-size: 5vh;
+            }
+            @include tablet{
+               font-size: 6vh;
+            }
+        }
+ h6{
+     color: rgb(87, 86, 86);
+     font-size: 1.1rem;
+     font-weight: 400;
+     text-align: start;
+     line-height: 1.7rem;
+     margin-top: 1rem;
+            
+            @include small{
+                font-size: .9rem;
+                line-height: 1.5rem;
+            }
+            @include mobile{
+                // font-size: 1.5rem;
+                line-height: 1.9rem;
+            }
+        }
+    }
+
+ .inputGroup{
+       display: block;
+       width: 40%;
+       position: relative;
+
+            @include small{
+                width: 90%;
+                margin-top: 1.2rem;
+            }
+            @include mobile{
+                width: 90%;
+                margin-top: 1.5rem;
+            }
+            @include tablet{
+                width: 45%;
+            }
+
+ input{
+    width: 90%;
+     height: 3rem;
+     border: 2px solid rgb(216, 17, 17);
+     border-radius: 35px;
+     
+
+        @include small{
+            height: 2.5rem;
+        }
+       
+ }
+ input::placeholder{
+            margin: auto;
+            font-weight: 700;
+            text-indent: 15px;
+            // color: white;
+
+            @include small{
+                font-size: .8rem;
+            }
+        }
+ button{
+    position: absolute;
+    right: 20px;
+    height: 3rem;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    border: none;
+    background: linear-gradient(to right, rgb(206, 42, 75), rgb(148, 17, 54));
+    border-radius: 35px; 
+    color: antiquewhite;
+    font-weight: 700;
+
+       @include small{
+         height: 2.5rem;
+         padding-left: 1.5rem;
+         padding-right: 1.5rem;
+       }
+      }
+    }
+}
+
+.cardContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include small{
+        display: flex;
+     }
+    @include mobile{
+        display: flex;
+     }
+
+  .card{
+        display: flex;
+        flex-direction: column;
+        border-bottom: 2px solid var(--primary-color);
+        border-radius: 20px;
+        box-shadow: 0 0 5px 0 rgba(112, 112, 112, 0.2);
+        padding: 1rem;
+        margin: 1.5rem;
+        align-items: start;
+        // min-height: 150px;
+
+        @include small{
+           display: flex;
+           margin: .5rem 1rem;      
+        }
+        @include mobile{
+           display: flex;
+           margin: 1rem;      
+        }
+        @include tablet{
+            min-height: 230px;
+        }
+
+ h6{
+      font-size: 60px;
+     color: red;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: .8rem 0 1rem 0;
+
+            @include small{
+                margin: .5rem 0 .5rem 0;
+            }
+            @include mobile{
+                margin: 1rem 0 1rem 0;
+            }
+        }
+ p{
+     color: rgb(39, 39, 39);
+     font-size: 1.1rem;
+     padding: 0 .8rem .8rem .8rem;
+     text-align: start;
+     font-family: 'Roboto', sans-serif;
+
+
+            @include small{
+                padding: 0 .1rem .4rem .1rem;
+             }
+            @include mobile{
+                padding: 0 .5rem .5rem .5rem;
+             }
+        }
+    }
+   
+}

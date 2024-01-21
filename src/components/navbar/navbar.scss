@@ -1,0 +1,112 @@
+@import '../../App.scss';
+
+nav{
+    height: 12vh;
+    background: linear-gradient(to right, rgb(206, 42, 75), rgb(148, 17, 54));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+    @include small{
+        height: 9vh;
+    }
+    @include mobile{
+        height: 10vh;
+    }
+    @include tablet{
+        height: 12vh;
+    }
+    
+
+    .logos{
+        display: flex;
+        align-items: center;
+        margin-left: 5rem;
+
+        @include tablet{
+            // margin-left: 3rem;
+        }
+        @include small{
+            margin-left: 1rem;
+        }
+        @include mobile{
+            margin-left: 1.7rem;
+        }
+
+        .textImg{
+            margin-left: 2rem;
+            width: 100px;
+
+            @include small{
+                margin-left: 1rem;
+                width: 80px;
+            }
+            @include mobile{
+                margin-left: 1rem;
+                width: 80px;
+            }
+        }
+        img{
+            width: 60px;
+
+            @include tablet{
+                width: 70px;
+            }
+            @include mobile{
+                width: 40px;
+            }
+            @include small{
+                width: 30px;
+            }
+        }
+    }
+    .menuIcon{
+        color: white;
+        width: 100px;
+        margin-right: 1rem;
+        font-size: 1.5rem;
+    }
+    .menu{
+        position: absolute;
+        top: 12vh;
+        right: 0px;
+        background-color: rgb(247, 247, 247);
+        
+        @include small{
+            top: 9vh;
+            width: 100%;
+        }
+        @include mobile{
+            width: 100%;
+            top: 10vh;
+        }
+        @include tablet{
+            top: 12 vh;
+        }
+        
+        .menuLists ,.logout{
+            padding: 1.1rem 6rem;
+            border-bottom: .5px solid rgb(214, 211, 211);
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        .menuLists:hover{
+            cursor: pointer;
+            background-color: rgb(228, 222, 222);
+        }
+        .logout{
+            background: linear-gradient(to right, rgb(206, 42, 75), rgb(148, 17, 54));
+            border: none;
+            color: azure;
+        }
+        .logout:hover{
+            background: rgb(238, 31, 73);
+            cursor: pointer;
+        }
+    }
+}

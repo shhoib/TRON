@@ -1,0 +1,23 @@
+.box {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 80%;
+  }
+  
+  .box-header {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    cursor: pointer;
+    background: linear-gradient(to right, rgb(226, 68, 100), rgb(148, 17, 54));
+    color: antiquewhite;
+    border-radius: 3px;
+}
+  
+  .box-details {
+    padding: 10px;
+    background-color: #dddddd;
+    color: rgb(68, 67, 67);
+    font-weight: 200;
+  }
+  
