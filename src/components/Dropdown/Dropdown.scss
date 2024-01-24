@@ -1,0 +1,107 @@
+@import '../../App.scss';
+
+
+.qContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    color: white;
+
+    @include mobile{
+        width: 90%;
+    }
+    @include small{
+        width: 90%;
+        margin-top: 1rem;
+    }
+    .qheader{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background-color: rgb(8, 8, 8);
+        padding: 9px 30px;
+        // box-shadow: 0 0 45px 5px rgba(22, 0, 0, 0.5);
+
+        @include mobile{
+            padding: 6px 18px;
+        }
+        @include small{
+            padding: 5px 15px;
+        }
+
+       h6{
+        font-size: 3.5vh;
+
+        @include mobile{
+            font-size: 2vh;
+        }
+        @include small{
+            font-size: 1.8vh;
+        }
+       }
+
+       .arrow{
+        margin-left: 2rem;
+        animation: arrow 3s infinite;
+
+        @include mobile{
+            margin-left: .5rem;
+        }
+        @include small{
+            margin-left: 0;
+        }
+    }
+    .htexts{
+        min-width: 500px;
+        margin-left: 5rem;
+
+        @include mobile{
+            min-width: 200px;
+            margin-left: 2rem;
+        }
+        @include small{
+            min-width: 140px;
+            margin-left: 1rem;
+        }
+        .htext{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    }
+    .content{
+        background-color: rgb(7, 7, 7);
+        min-width: 500px;
+        border-radius: 10px;
+        padding:8px;
+        margin-top: 5px;
+        animation:  contentBox 1s;
+
+        @include mobile{
+            min-width: 200px;
+        }
+        @include mobile{
+            min-width: 180px;
+        }
+    }
+}
+
+@keyframes arrow {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(8px);
+    }
+  }
+  @keyframes contentBox {
+    0%{
+        transform: translateY(-25px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+  }

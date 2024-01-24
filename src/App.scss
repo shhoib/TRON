@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@500;600;700;900&family=Joti+One&family=Montserrat:ital,wght@0,500;1,500&family=Outfit:wght@500;600;900&family=Playfair+Display&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,400&family=Righteous&family=Roboto:wght@300;400;500&family=Rubik&family=Rubik+Glitch&family=Rubik+Maps&family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@500;600;700;900&family=Joti+One&family=Lato&family=Montserrat:ital,wght@0,500;1,500&family=Outfit:wght@500;600;900&family=Playfair+Display&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,400&family=Righteous&family=Roboto:wght@300;400;500&family=Rubik&family=Rubik+Burned&family=Rubik+Glitch&family=Rubik+Maps&family=Rubik+Scribble&family=Ubuntu&display=swap');
 
 *{
   box-sizing: border-box;
@@ -16,7 +16,8 @@ html{
   // --accent-color: #b4b2b2;
 }
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
+  background-color: rgb(0, 0, 0);
 }
 
 @mixin small {
