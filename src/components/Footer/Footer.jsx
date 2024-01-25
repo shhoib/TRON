@@ -9,7 +9,7 @@ const Footer = () => {
         <hr />
         <div className="logo">
           <LogoSVG/>
-          <img src="/public/img/tron3.png" alt="" />
+          <img src="/public/img/tron.webp" alt="" loading='lazy'/>
         </div>
          <div className='telegram'><FaTelegram/></div>
         <div className="policy">

@@ -1,0 +1,127 @@
+@import '../../App.scss';
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right ,black, #030314);
+    height: 13vh;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid rgb(226, 121, 121);
+    z-index: 10;
+
+    .imageContainer{
+        margin-left: 3rem;
+
+        @include mobile{
+            margin-left: 2rem;
+        }
+        @include small{
+            margin-left: 1.7rem;
+        }
+
+        .TronImg{
+            width: 130px;
+            margin-left: 2rem;
+
+            @include mobile{
+                width: 90px;
+                margin-left: 1rem;
+            }
+            @include small{
+                width: 80px;
+                margin-left: 1rem;
+            }
+        }
+
+        img{
+            width: 50px;
+
+            @include mobile{
+                width: 35px;
+            }
+            @include small{
+                width: 30px;
+            }
+        }
+    }
+
+    .LI{
+        display: flex;
+        gap: 35px;
+        margin-right: 3rem;
+        align-items: center;
+
+        @include mobile{
+            display: none;
+        }
+        @include small{
+            display: none;
+        }
+        
+        p{
+            color: white;
+            transition: color 0.3s ease;
+        }
+        p:hover{
+            color: rgb(236, 39, 39);
+            cursor: pointer;
+        }
+      .Logout{
+        color: rgb(214, 47, 47);
+        font-weight: 600;
+        font-size: 1.2rem;
+        }
+        .Logout:hover{
+            color: red;
+            cursor: pointer;
+        }
+    }
+    h6{
+        display: none;
+        font-size: 2rem;
+        color: rgb(146, 144, 144);
+        margin-right: 2rem;
+
+        @include mobile{
+            display: flex;
+        }
+        @include small{
+            display: flex;
+        }
+    }
+    .menuLists{
+        color: rgb(156, 152, 152);
+        position: absolute;
+        top: 13vh;
+        right: 0;
+        width: 100%;
+        animation: menu 1s ;
+
+        p{
+            text-align: center;
+            border-bottom: 1px solid rgb(43, 3, 3);
+            padding: 0.8rem;
+            background-color: #030314;
+        }
+        .Logout{
+            color: rgb(214, 47, 47);
+            font-weight: 600;
+            font-size: 1.2rem;
+            }
+            .Logout:hover{
+                color: red;
+                cursor: pointer;
+            }
+    }
+}
+
+@keyframes menu {
+    0%{
+        transform: translateX(80px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}

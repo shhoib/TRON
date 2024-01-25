@@ -3,7 +3,7 @@
 .landingBanner{
     background-image: url('/public/img/BannerGIF.gif');
     background-size: cover;
-    height: 80vh;
+    height: 87vh;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -131,7 +131,7 @@
                 height: 35px;
             }
             @include small{
-                width: 60%;
+                width: 50%;
                 height: 35px;
             }
             @include tablet{
@@ -157,6 +157,7 @@
             }
             @include small{
                 height: 35px;
+                padding: 0 1rem;
             }
         }
         button:hover {

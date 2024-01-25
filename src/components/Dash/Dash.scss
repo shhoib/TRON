@@ -4,7 +4,7 @@
 .Dashboard{
 
     .dashBanner{
-        background-image: url('https://i.pinimg.com/originals/51/ae/a3/51aea3393b8234a1e69d8713a0a58bc3.gif');    
+        background-image: url('https://i.pinimg.com/originals/10/9b/f2/109bf2395a1e40abbf4cd4a05cf73bd9.gif');    
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -13,10 +13,10 @@
     }
     
     .balanceContainer{   
-        color: white;
+        color: rgb(216, 214, 214);
         width: 55%;
         height: 50vh;
-        background: linear-gradient(to right, #0a0a14, #03030a);
+        background: linear-gradient(to right ,black, #030314);
         border-bottom-left-radius: 35%;
         border-bottom-right-radius: 35%;
         display: flex;
@@ -217,7 +217,7 @@
             width: 100%;
             display: flex;
             justify-content: space-evenly;
-            background-color: #01010a;
+            background: linear-gradient(to right ,black, #030314);
 
             @include mobile{
                 flex-direction: column;
