@@ -1,0 +1,111 @@
+@import '../../App.scss';
+
+
+.Dashboard{
+    .dashBanner{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-image: url('/img/stars.png');
+    }
+    
+    .balanceContainer{   
+        color: white;
+        width: 55%;
+        height: 50vh;
+        background: linear-gradient(to right, #111125, #04040e);
+        border-bottom-left-radius: 35%;
+        border-bottom-right-radius: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 5px 20px 0px rgba(39, 39, 39, 0.5);
+
+        .balanceTexts{
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            justify-content: center;
+            text-align: left;
+
+            h6{
+                font-size: 2.3rem;
+                margin-left: 7rem;
+            }
+            p{
+                font-size: 1.1rem;
+                margin-left: 7rem;
+                margin-top: 2.5rem;
+                margin-bottom: .7rem;
+            }
+            h5{
+                font-size: 2.1rem;
+                margin-left: 7rem;
+
+                span{
+                    color: red;
+                }
+            }
+        }
+
+    }
+    h2{
+        font-size: 8vh;
+        color: rgb(255, 255, 255);
+        font-weight: 900;
+        text-shadow: 2px 5px 30px rgba(179, 121, 121, 0.5);
+        margin-top: 3rem;
+
+        @include mobile{
+            font-size: 3.6vh;
+            text-align: center;
+        }
+        @include small{
+            font-size: 2.5vh;
+            text-align: center;
+        }
+    }
+    .inputContainer{
+        margin-top: 2rem;
+        display: flex;
+
+        input{
+            border: none;
+            height: 2.5rem;
+            border-bottom-left-radius: 3px;
+            border-top-left-radius: 3px;
+        }
+        button{
+            background: linear-gradient(to right, red, rgb(66, 0, 0));
+            border: none;
+            color: white;
+            height: 2.5rem;
+            width: 6rem;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            font-weight: 600;
+            .copy{
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    .cards{
+
+        .dashCard{
+            width: 300px;
+            height: 200px;
+            background: rgb(255, 0, 0);
+            backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+            border-radius: 10px; /* Optional: Add rounded corners for a nicer look */
+            border: 1px solid rgba(110, 110, 110, 0.2);
+        }
+    }
+}

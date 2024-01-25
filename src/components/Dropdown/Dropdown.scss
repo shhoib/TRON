@@ -39,7 +39,7 @@
             font-size: 2vh;
         }
         @include small{
-            font-size: 1.8vh;
+            font-size: 1.5vh;
         }
        }
 
@@ -69,6 +69,7 @@
         .htext{
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
     }
     }
@@ -77,14 +78,15 @@
         min-width: 500px;
         border-radius: 10px;
         padding:8px;
-        margin-top: 5px;
+        // margin-top: 5px;
         animation:  contentBox 1s;
 
         @include mobile{
             min-width: 200px;
         }
-        @include mobile{
-            min-width: 180px;
+        @include small{
+            min-width: 120px;
+            font-size: 10px;
         }
     }
 }
@@ -99,7 +101,7 @@
   }
   @keyframes contentBox {
     0%{
-        transform: translateY(-25px);
+        transform: translateY(-15px);
     }
     100%{
         transform: translateY(0px);

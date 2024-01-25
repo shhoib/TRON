@@ -2,27 +2,17 @@ import './DandW.scss'
 import faq from '../../../public/svg/faq.json'
 import Lottie from 'react-lottie'
 import Dropdown from '../Dropdown/Dropdown';
-import { useState,useEffect } from 'react';
+import Corousel from '../corousel/Corousel';
+// import { useState,useEffect } from 'react';
 
 
 const DandW = () => {
-
-  const [imageIndex, setImageIndex] = useState(0);
 
     const FAQOptions = {
         loop: true,
         autoplay: true,
         animationData: faq,
-      };
-
-      const images = ['/public/img/dogecoin.webp', '/public/img/paypal.webp']
-
-      useEffect(() => {
-        const intervalId = setInterval(() => {
-          setImageIndex((prev) => (prev + 1) % images.length);
-        }, 3000);
-          return () => clearInterval(intervalId);
-      }, [images.length]);
+      }; 
 
   return (
     <div>
@@ -77,10 +67,8 @@ const DandW = () => {
         <Dropdown heading={'Can i make more than one deposite?'} content={'Something about unique'}/>
         </div>
 
-        <div className="accepted">
-          <h2>Accepted payments</h2>
-          <img src={images[imageIndex]} alt="" loading='lazy'/>
-        </div>
+       <Corousel/>
+
     </div>
   )
 }

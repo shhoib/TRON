@@ -1,4 +1,12 @@
+@import '../../src/App.scss';
 
 svg{
-    height: 100px;;
+    height: 100px;
+
+    @include mobile{
+        height: 70px;
+    }
+    @include small{
+        height: 45px;
+    }
 }
