@@ -2,59 +2,120 @@
 
 
 .Dashboard{
-    .dashBanner{
 
+    .dashBanner{
+        background-image: url('https://i.pinimg.com/originals/51/ae/a3/51aea3393b8234a1e69d8713a0a58bc3.gif');    
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 100%;
-        background-image: url('/img/stars.png');
     }
     
     .balanceContainer{   
         color: white;
         width: 55%;
         height: 50vh;
-        background: linear-gradient(to right, #111125, #04040e);
+        background: linear-gradient(to right, #0a0a14, #03030a);
         border-bottom-left-radius: 35%;
         border-bottom-right-radius: 35%;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0px 5px 20px 0px rgba(39, 39, 39, 0.5);
 
-        .balanceTexts{
+        @include mobile{
+            width: 100%;
+            border-bottom-left-radius: 20%;
+           border-bottom-right-radius: 20%;
+           height: 30vh;
+        }
+        @include small{
+            width: 100%;
+            border-bottom-left-radius: 20%;
+           border-bottom-right-radius: 20%;
+           height: 30vh;
+        }
+
+   .balanceTexts{
             width: 70%;
             display: flex;
             flex-direction: column;
-            // align-items: center;
             justify-content: center;
             text-align: left;
 
-            h6{
-                font-size: 2.3rem;
-                margin-left: 7rem;
+            @include mobile{
+                width: 100%;
             }
-            p{
+            @include small{
+                width: 100%;
+            }
+
+       h6{
+                font-size: 2.3rem;
+                margin-left: 6rem;
+
+                @include mobile{
+                    margin-left: 2rem;
+                    font-size: 1.7rem;
+                }
+                @include small{
+                    margin-left: 1rem;
+                    font-size: 1.5rem;
+                }
+
+            }
+      p{
                 font-size: 1.1rem;
-                margin-left: 7rem;
+                margin-left: 6rem;
                 margin-top: 2.5rem;
                 margin-bottom: .7rem;
+                text-shadow: 1px 1px 10px rgb(255, 0, 0);
+
+                @include mobile{
+                    margin-left: 2rem;
+                    font-size: 0.8rem;
+                    margin-top: 2rem;
+                }
+                @include small{
+                    margin-left: 1rem;
+                    font-size: 0.7rem;
+                    margin-top: 1.8rem;
+                }
+
             }
-            h5{
-                font-size: 2.1rem;
-                margin-left: 7rem;
+      h5{
+                font-size: 1.8rem;
+                margin-left: 6rem;
+
+                @include mobile{
+                    margin-left: 2rem;
+                    font-size: 1.3rem;
+                }
+                @include small{
+                    margin-left: 1rem;
+                    font-size: 1.1rem;
+                }
 
                 span{
                     color: red;
                 }
             }
         }
+   .animation{
 
-    }
-    h2{
-        font-size: 8vh;
+            height: 10rem;
+            margin-right: 2rem;
+
+            @include mobile{
+                height: 7rem;
+            }
+            @include small{
+                height: 7rem;
+            }
+        }
+     }
+  h2{
+        font-size: 7vh;
         color: rgb(255, 255, 255);
         font-weight: 900;
         text-shadow: 2px 5px 30px rgba(179, 121, 121, 0.5);
@@ -65,21 +126,40 @@
             text-align: center;
         }
         @include small{
-            font-size: 2.5vh;
+            font-size: 3.2vh;
             text-align: center;
         }
-    }
-    .inputContainer{
+     }
+ .inputContainer{
         margin-top: 2rem;
         display: flex;
+        margin-bottom: 2rem;
 
-        input{
+        @include mobile{
+            margin-top: 1.5rem;
+        }
+        @include small{
+            margin-top: 1.5rem;
+        }
+
+   input{
             border: none;
             height: 2.5rem;
-            border-bottom-left-radius: 3px;
-            border-top-left-radius: 3px;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            padding-left: .6rem;
+            width: 250px;
+
+            @include mobile{
+                width: 180px;
+                height: 2rem;
+            }
+            @include small{
+                width: 150px;
+                height: 2rem;
+            }
         }
-        button{
+  button{
             background: linear-gradient(to right, red, rgb(66, 0, 0));
             border: none;
             color: white;
@@ -91,21 +171,113 @@
             justify-content: center;
             gap: 5px;
             font-weight: 600;
+
+            @include mobile{
+                width: 5rem;
+                height: 2rem;
+            }
+            @include small{
+                width: 5rem;
+                height: 2rem;
+            }
+
             .copy{
                 font-size: 1.3rem;
             }
         }
     }
 
-    .cards{
+  .cards{
 
-        .dashCard{
-            width: 300px;
-            height: 200px;
-            background: rgb(255, 0, 0);
-            backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
-            border-radius: 10px; /* Optional: Add rounded corners for a nicer look */
-            border: 1px solid rgba(110, 110, 110, 0.2);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-top: 3rem;
+
+        @include mobile{
+            flex-direction: column;
+        }
+        @include small{
+            flex-direction: column;
+        }
+
+  .cards1{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+
+            @include mobile{
+                flex-direction: column;
+            }
+        }
+   .cards2{
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #01010a;
+
+            @include mobile{
+                flex-direction: column;
+            }
+
+            .cardNumber{
+                font-size: 1.9rem;
+                color: rgb(228, 64, 64);
+            }
+        
+        .card2Title{
+            @include mobile{
+                margin-top: 3rem;
+            }
+            @include small{
+                margin-top: 3rem;
+            }
+        }
+            }
+
+  .dashCard{
+           color: white;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+      h5{
+            font-size: 1.9rem;
+
+            @include mobile{
+                font-size: 1.5rem;
+            }
+            @include small{
+                font-size: 1.4rem;
+            }
+           }
+     p{
+            font-size: 1rem;
+            margin-top: .5rem;
+            text-shadow: 1px 1px 10px rgb(255, 0, 0);
+
+            @include small{
+                font-size: 0.8rem;
+            }
+         }
+      hr{
+            width: 100%;
+            height: 1px;
+            margin-top: 1rem;
+            background-color: red;
+            border: none;
+            margin-bottom: 2rem;
+
+            @include mobile{
+                width: 70%;
+            }
+            @include small{
+                width: 80%;
+            }
+         }
         }
     }
 }
